@@ -1,4 +1,4 @@
-# Zordon Telegram Bot 3.0
+# Some Telegram Bot 1.0
 
 ### Current version is under development and highly unstable
 
@@ -22,14 +22,7 @@ Bot can be started without docker by `python scripts/run_bot.py`. Parameters can
 
 Tests can be run with `python -m unittests` in root directory.
 
-### BotFather
-Check bot settings with BotFather:
-* Group mode should be enabled
-* Inline mode should be disabled
-* Group privacy mode should be disabled
-
 ### Dependencies:
 
 * Python 3.7 or newer
-* PostgreSQL database
 * Packages from `requirements.txt`
