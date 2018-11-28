@@ -1,7 +1,1 @@
 python-telegram-bot[socks] == 11.1.0 # Python API for Telegram Bot
-
-babel == 2.6.0 # Localization library with gettext support
-
-sqlalchemy == 1.2.11
-alembic == 1.0.0
-psycopg2-binary == 2.7.5

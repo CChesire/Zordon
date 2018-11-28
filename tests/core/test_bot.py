@@ -1,13 +1,11 @@
 from unittest.mock import MagicMock, patch
 
 import app.core.bot
-import app.database.connection
-from tests.base import BaseTestCase, MatcherAny
+from tests.base import BaseTestCase
 
 
 class TestLaunch(BaseTestCase):
     @patch('app.core.bot.Updater', new=MagicMock())
-    @patch('app.core.bot.DatabaseConnection', new=MagicMock())
     def test_polling(self):
         zordon_bot = app.core.bot.Bot()
         zordon_bot.run()
@@ -17,7 +15,6 @@ class TestLaunch(BaseTestCase):
         self.assertFalse(zordon_bot.updater.start_webhook.called)
 
     @patch('app.core.bot.Updater', new=MagicMock())
-    @patch('app.core.bot.DatabaseConnection', new=MagicMock())
     @patch('sys.argv', ['_', '-w', 'http://test.url:1199'])
     def test_webhook(self):
         zordon_bot = app.core.bot.Bot()
